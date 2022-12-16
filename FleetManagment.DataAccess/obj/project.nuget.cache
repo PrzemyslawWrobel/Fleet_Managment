@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "dUGw8vER8E35R/IXGRPR89CKK8vloNQTD+Taxv1NFIz6P5SItXNXiK02/WCL9efTAu0eN0ftzYV/jg4WteI7lQ==",
+  "success": true,
+  "projectFilePath": "C:\\PW\\Fleet_Managment\\FleetManagment.DataAccess\\FleetManagment.DataAccess.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://10.10.10.34:40002/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    },
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://10.10.10.34:45000/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
