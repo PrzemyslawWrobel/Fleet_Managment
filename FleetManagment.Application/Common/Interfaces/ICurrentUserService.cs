@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace FleetManagment.Application.Common.Interfaces
 {
-    string Email { get; set; }
-    bool IsAuthenticated { get; set; }
+    public interface ICurrentUserService
+    {
+        string Email { get; set; }
+        bool IsAuthenticated { get; set; }
+    }
 }
