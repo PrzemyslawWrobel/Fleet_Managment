@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FleetManagment.DataAccess\FleetManagment.DataAccess.csproj" />
+    <ProjectReference Include="..\FleetManagment.Infrastructure\FleetManagment.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

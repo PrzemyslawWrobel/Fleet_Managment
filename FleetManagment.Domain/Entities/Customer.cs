@@ -13,6 +13,7 @@ namespace FleetManagment.Domain.Entities
         {
             //Addresses = new List<Address>();
         }
+
         public int Id { get; set; }
 
         /// <summary>

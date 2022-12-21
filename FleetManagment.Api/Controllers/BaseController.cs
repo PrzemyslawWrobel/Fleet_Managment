@@ -9,7 +9,6 @@ namespace FleetManagment.Api.Controllers
     /// Kontroler bazowy po którym będą dziedziczyły wszystkie kontrolery
     /// </summary>
     [ApiController]
-    [Authorize]
     public class BaseController : ControllerBase
     {
         private IMediator _mediator;

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FleetManagment.Domain.Entities;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,5 @@ namespace FleetManagment.Application.Customers.Queries.GetCustomers
 {
     public class GetCustomersQuery : IRequest<GetCustomersVm>
     {
-        public int CustomerId { get; set; }
     }
 }
