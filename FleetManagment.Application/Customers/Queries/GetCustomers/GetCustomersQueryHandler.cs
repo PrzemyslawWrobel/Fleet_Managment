@@ -27,7 +27,7 @@ namespace FleetManagment.Application.Customers.Queries.GetCustomers
             {
                 var customers = await _context.Customers.AsNoTracking().ProjectTo<CustomerDto>(_mapper.ConfigurationProvider).ToListAsync(cancellationToken);
                 customers.OrderBy(p => p.Name).ToList();
-                return new GetCustomersVm(customers);//{ Customers = customers };
+                return new GetCustomersVm(customers);
             }
             catch (Exception e)
             {
