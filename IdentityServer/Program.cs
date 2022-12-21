@@ -1,5 +1,24 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
+var assembly = typeof(Program).Assembly.GetName().Name;
+var defaultConnString = builder.Configuration.GetConnectionString("FleetManagmentIdentityServerDbContext");
+
+builder.Services.AddIdentityServer()
+    .AddAspNetIdentity<IdentityUser>()
+    .AddConfigurationStore(options =>
+    {
+        options.ConfigureDbContext = b =>
+        b.UseSqlServer(defaultConnString, opt => opt.MigrationsAssembly(assembly));
+    })
+    .AddOperationalStore(options =>
+    {
+        options.ConfigureDbContext = b =>
+        b.UseSqlServer(defaultConnString, opt => opt.MigrationsAssembly(assembly));
+    })
+    .AddDeveloperSigningCredential();
 // Add services to the container.
 builder.Services.AddRazorPages();
 
@@ -17,6 +36,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseIdentityServer();
 
 app.UseAuthorization();
 
