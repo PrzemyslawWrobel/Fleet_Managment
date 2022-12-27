@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
+using IdentityModel;
 using IdentityServer4.Models;
 using System.Collections.Generic;
 
@@ -14,6 +15,7 @@ namespace IdentityServer
                    {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResource(name: "user", userClaims: new[] {JwtClaimTypes.Email})
                    };
 
         public static IEnumerable<ApiScope> ApiScopes =>
