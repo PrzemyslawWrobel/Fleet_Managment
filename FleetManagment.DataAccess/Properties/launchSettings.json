@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "FleetManagment.DataAccess": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58894;http://localhost:58896"
+    }
+  }
+}

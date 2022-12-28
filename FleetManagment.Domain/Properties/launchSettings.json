@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "FleetManagment.Domain": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58893;http://localhost:58897"
+    }
+  }
+}
