@@ -44,7 +44,7 @@ namespace FleetManagment.IdentityServer
                     ClientName = "Client for Postman user",
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
                     ClientSecrets = { new Secret("secret".Sha256()) },
-                    AllowedScopes = { "api1", "user"},
+                    AllowedScopes = { "FleetManagmentAPI.read", "FleetManagmentAPI.write"},
                     AlwaysSendClientClaims = true,
                     AlwaysIncludeUserClaimsInIdToken = true,
                     AllowAccessTokensViaBrowser = true
@@ -56,12 +56,15 @@ namespace FleetManagment.IdentityServer
                     ClientName = "Client for Swagger user",
                     AllowedGrantTypes = GrantTypes.CodeAndClientCredentials,
                     ClientSecrets = {new Secret("secret".Sha256())},
-                    AllowedScopes = {"api1", "user", "openid"},
+                    AllowedScopes = {"profile", "openid",  "FleetManagmentAPI.read", "FleetManagmentAPI.write"},
                     AlwaysSendClientClaims = true,
                     AlwaysIncludeUserClaimsInIdToken = true,
                     AllowAccessTokensViaBrowser = true,
                     RedirectUris = { "https://localhost:44312/swagger/oauth2-redirect.html" },
-                    AllowedCorsOrigins = { "https://localhost:44312" }
+                    AllowedCorsOrigins = { "https://localhost:44312" },
+                    RequirePkce = true,
+                    RequireConsent= true,
+                    AllowPlainTextPkce = false
                 }
             };
     }
