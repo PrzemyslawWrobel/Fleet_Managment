@@ -14,13 +14,19 @@ namespace FleetManagment.IdentityServer
 {
     public class SeedData
     {
-        public static void EnsureSeedData(string connectionString)
+        public static void EnsureSeedData(IServiceProvider serviceProvider, IConfiguration configuration)
         {
+
+            var connectionString = configuration.GetSection("FleetManagmentDbContext").Value;
             var services = new ServiceCollection();
             services.AddLogging();
             services.AddDbContext<FleetManagmentIdentityDbContext>(
                 options => options.UseSqlServer(connectionString)
             );
+
+            var logger = services.BuildServiceProvider().GetRequiredService<ILogger<SeedData>>();
+            logger.LogError("SeedData");
+            
 
             services
                 .AddIdentity<IdentityUser, IdentityRole>()
@@ -48,7 +54,7 @@ namespace FleetManagment.IdentityServer
                 }
             );
 
-            var serviceProvider = services.BuildServiceProvider();
+            //var serviceProvider = services.BuildServiceProvider();
 
             using var scope = serviceProvider.GetRequiredService<IServiceScopeFactory>().CreateScope();
             scope.ServiceProvider.GetService<PersistedGrantDbContext>().Database.Migrate();

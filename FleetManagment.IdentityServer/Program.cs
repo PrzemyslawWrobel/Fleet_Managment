@@ -48,4 +48,12 @@ app.UseIdentityServer();
 //    endpoints.MapDefaultControllerRoute();
 //});
 
+
+//Use only to add data to database 
+
+//if (seed)
+//{
+//    SeedData.EnsureSeedData(app.Services, app.Configuration);
+//}
+
 app.Run();
