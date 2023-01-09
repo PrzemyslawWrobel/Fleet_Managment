@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿
+using AutoMapper;
 using FleetManagment.Application.Common.Interfaces;
 using FleetManagment.Domain.Entities;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace FleetManagment.Application.Customers.Queries.GetCustomers
 {
