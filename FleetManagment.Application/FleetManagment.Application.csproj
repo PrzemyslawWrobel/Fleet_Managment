@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FleetManagment.Domain\FleetManagment.Domain.csproj" />
+    <ProjectReference Include="..\FleetManagment.SharedModels\FleetManagment.SharedModels.csproj" />
   </ItemGroup>
 
 </Project>
