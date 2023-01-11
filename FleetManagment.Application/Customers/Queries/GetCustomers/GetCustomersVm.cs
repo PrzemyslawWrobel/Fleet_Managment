@@ -8,11 +8,11 @@ namespace FleetManagment.Application.Customers.Queries.GetCustomers
 {
     public class GetCustomersVm
     {
-        public GetCustomersVm(ICollection<CustomerDto> customers)
+        public GetCustomersVm(ICollection<CustomerDtoApi> customers)
         {
             Customers = customers;
         }
 
-        public ICollection<CustomerDto> Customers { get; set; }
+        public ICollection<CustomerDtoApi> Customers { get; set; }
     }
 }

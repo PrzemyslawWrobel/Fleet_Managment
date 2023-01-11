@@ -1,4 +1,7 @@
-﻿<h3>CustomersTable</h3>
+﻿@using FleetManagment.Client.Pages;
+@using FleetManagment.SharedModels.Customers
+
+<h3>CustomersTable</h3>
 
 <table class="table table-striped">
     <thead>
@@ -6,8 +9,16 @@
             Name
         </tr>
     </thead>
+    <tbody>
+        @foreach (var customer in Customers)
+        {
+            <tr>
+                <td>customer.</td>
+            </tr>
+        }
+    </tbody>
 </table>
 
 @code {
-
+    public List<CustomerDto> Customers { get; set; }
 }
